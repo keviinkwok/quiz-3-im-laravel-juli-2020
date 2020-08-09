@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/items/create', 'ItemController@create'); // menampilkan halaman form
@@ -22,3 +22,14 @@ Route::get('/items/{id}', 'ItemController@show'); // menampilkan detail item den
 Route::get('/items/{id}/edit', 'ItemController@edit'); // menampilkan form untuk edit item
 Route::put('/items/{id}', 'ItemController@update'); // menyimpan perubahan dari form edit
 Route::delete('/items/{id}', 'ItemController@destroy'); // menghapus data dengan id
+
+route::get('/proyek','proyekController@index');//sudah
+route::get('/proyek/create','proyekController@create');//sudah
+route::post('/proyek','proyekController@store');//sudah
+route::get('/proyek/{id}/daftarkan-staff','proyekController@createStaff');
+route::post('/proyek/{id}/daftarkan-staff','proyekController@storeStaff');
+Route::get('/proyek/{id}/edit', 'proyekController@edit');//sudah
+Route::put('/proyek/{id}', 'proyekController@update');//sudah
+Route::delete('/proyek/{id}', 'proyekController@destroy');//sudah
+Route::get('/proyek/{id}', 'proyekController@show');
+
